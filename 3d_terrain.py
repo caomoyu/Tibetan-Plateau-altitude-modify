@@ -24,9 +24,7 @@ plt.close()
 
 
 f1 = "./geo_em.d01.nc"
-f2 = "./wrfinput_d01"
 ds1 = xr.open_dataset(f1)
-ds2 = xr.open_dataset(f2)
 h1 = ds1.HGT_M.data[0,:,:]
 h2 = np.where(h1>500,500,h1)
 
